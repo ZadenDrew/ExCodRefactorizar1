@@ -1,42 +1,30 @@
 /*
  * Examen Refactorizacion
+ * modificado por ANDREA 
  * 
  */
 package lovivido;
 
 import javax.swing.JOptionPane;
 
+/**
+ *
+ * @author acabezaslopez
+ */
 public class LoVivido {
 
-public static void main(String[] args) {
-String n;
-String e;
+    /**
+     *
+     * @param args String
+     */
+    public static void main(String[] args) {
+        String nombre = null;
 
-int m;
-int d;
-int h;
-int a;
+        TiempoVivido nv = new TiempoVivido();
+        nv.calculaTiempo(nv.introduceNombre(), nv.introduceEdad());
+        nv.devuelveVentanas(nombre);
+        System.exit(0);
 
-n = JOptionPane.showInputDialog ("Escriba su nombre: ");
-e = JOptionPane.showInputDialog ("Escriba su edad: ");
- 
-a = Integer.parseInt (e);
- 
-m = (a*12);
-d = (a*365);
-h = (d*24);
- 
- JOptionPane.showMessageDialog(null,  "Meses: "  +m,"Numero de meses vividos de " +n,JOptionPane.INFORMATION_MESSAGE);
-
-
- JOptionPane.showMessageDialog(null, "Días: " +d,"Numero de días vividos de "+n,JOptionPane.INFORMATION_MESSAGE);
-
-
- JOptionPane.showMessageDialog(null, "Horas: " +h,"Numero de horas vividos de "+n,JOptionPane.INFORMATION_MESSAGE);
-
-   System.exit (0);
-
-}
-   
+    }
 
 }
